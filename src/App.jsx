@@ -23,9 +23,10 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Analisador de Currículo com IA</h1>
+      <p className="eyebrow">// Triagem automatizada de currículo</p>
+      <h1>Analisador de Currículo</h1>
       <ResumeForm onAnalyze={handleAnalyze} />
-      {loading && <p className="loading">Analisando...</p>}
+      {loading && <p className="loading">Lendo e analisando o currículo...</p>}
       {result && (
         <div className="result-card">
           <ReactMarkdown>{result}</ReactMarkdown>

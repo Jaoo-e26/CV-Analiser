@@ -15,7 +15,7 @@ function App() {
       const analysis = await analyzeResume(data);
       setResult(analysis);
     } catch (err) {
-      setResult('Ocorreu um erro ao analisar. Tente novamente.');
+      setResult('O serviço de IA está temporariamente sobrecarregado. Tentamos algumas vezes automaticamente, mas não conseguimos agora — tente novamente em alguns segundos.');
     } finally {
       setLoading(false);
     }

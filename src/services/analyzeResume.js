@@ -56,4 +56,9 @@ export async function analyzeResume({ resumeText, jobText }) {
 
       const waitTime = attempt * 1500;
       console.warn(`Tentativa ${attempt} falhou (${err.status}), tentando de novo em ${waitTime}ms...`);
-      await
+      await sleep(waitTime);
+    }
+  }
+
+  throw lastError;
+}
